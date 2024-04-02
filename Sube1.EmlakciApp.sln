@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sube1.EmlakciApp", "Sube1.EmlakciApp\Sube1.EmlakciApp.csproj", "{DE85E603-6372-4172-98E4-6B8FFC2EE2AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sube1.EmlakciLib", "Sube1.EmlakciLib\Sube1.EmlakciLib.csproj", "{F5E14CA7-2AA8-4B3F-B1E4-4DA8DF2B6C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sube1.EmlakciLib", "Sube1.EmlakciLib\Sube1.EmlakciLib.csproj", "{F5E14CA7-2AA8-4B3F-B1E4-4DA8DF2B6C8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

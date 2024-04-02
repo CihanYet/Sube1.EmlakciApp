@@ -25,18 +25,41 @@ namespace Sube1.EmlakciApp
             //{
             //    Console.WriteLine("Bir hata oluştu");
             //} 
-            #endregion            
+            #endregion
 
-            Ev evim2 = new Ev();
-            evim2.alan = 120;
-            evim2.katno = 2;
-            evim2.semt = "Kazan";
-            evim2.odasayisi = 3;
+            //int sayi = 5;//Set
+            //Console.WriteLine(sayi);//Get
 
-            Console.WriteLine(evim2.EvBilgileri());
+
+            Ev evim = new Ev();
+
+            //Console.WriteLine("Oda sayısı giriniz:");
+            //evim.Odasayisi = int.Parse(Console.ReadLine());
+
+
+            //Console.WriteLine("Kat no giriniz:");
+            //evim.Katno = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Semt Giriniz:");
+            //evim.SetSemt(Console.ReadLine());
+            //Console.WriteLine("Alan giriniz:");
+            //evim.SetAlan(double.Parse(Console.ReadLine()));
+
+            evim.SetAlan(120);
+            Console.WriteLine($"Girilen evin büyüklüğü:{evim.Buyukluk}");
+
+
+
+
+            //<100 Küçük ev
+            //100-150 Orta Ev
+            //>150 Büyük Ev
         }
-    }   
+    }
 }
+
+//Kapsülleme ilkesi(Encapsulation): Bir class içerisinde yapılan işlemlerin, class dışından gizlenmesidir.
+
+//Property: Fieldlara değer atamak yada okumak için kullanılan yapılardır. İçlerinde get ve opsiyonel olarak set yapısı bulunur.
 
 //Classlar aynı zamanda bir veri tipidir.
 //Referanslar nesnelere ulaşmak için kullanılan yapılardır. Stack bölgesinde tutulurlar. Heap bölgesinde oluşturulan nesnenin adres bilgisini tutarlar.
