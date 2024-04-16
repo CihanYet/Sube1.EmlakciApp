@@ -4,15 +4,67 @@ namespace Sube1.EmlakciLib
 {
     public class Ev
     {
+        private static int sayac = 0;
+        //Constructor-Yapıcı Metod-Kurucu metod
+        public Ev(int odasayisi, int katno, string semt, double alan)
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Alan = alan;
+            this.SetSemt(semt);
+            sayac++;
+        }
+        public Ev()
+        {
+            sayac++;
+        }
+
+        public Ev(int odasayisi, int katno, double alan)
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Alan = alan;
+            this.SetSemt("Gazi");
+            sayac++;
+        }
+
         private int odasayisi;//field
-        private int katno;
+
         private string semt;
-        private double alan;
         private string buyukluk;
 
-        public int Katno { get => katno; set => katno = value; }//Property
-        public int Odasayisi { get => odasayisi; set => odasayisi = Math.Abs(value); }
+        private double alan;
+
+        public double Alan
+        {
+            get
+            {
+                return alan;
+            }
+            set
+            {
+                alan = value;
+                if (this.alan < 100)
+                {
+                    this.buyukluk = "Küçük Ev";
+                }
+                else if (this.alan >= 100 && this.alan <= 150)
+                {
+                    this.buyukluk = "Orta Ev";
+                }
+                else
+                {
+                    this.buyukluk = "Büyük Ev";
+                }
+            }
+        }
+
+        public int Katno { get; set; }
+
         public string Buyukluk { get => buyukluk; }
+        public int Odasayisi { get => odasayisi; set => odasayisi = Math.Abs(value); }
+        public static int Sayac { get => sayac;  }
+
         public void SetSemt(string semt) => this.semt = semt.ToUpper();
 
         public string GetSemt() => this.semt;
@@ -36,15 +88,9 @@ namespace Sube1.EmlakciLib
 
         public double GetAlan() => this.alan;
 
-        //public void SetOdaSayisi(int odasayisi)
-        //{
-        //    this.odasayisi = Math.Abs(odasayisi);
-        //}
+        public void SetOdaSayisi(int odasayisi) => this.Odasayisi = Math.Abs(odasayisi);
 
-        //public int GetOdasayisi()
-        //{
-        //    return this.odasayisi;
-        //}
+        public int GetOdasayisi() => odasayisi;
 
         public string EvBilgileri()
         {
@@ -72,3 +118,6 @@ namespace Sube1.EmlakciLib
         }
     }
 }
+
+
+//Constructor: Class içinde tanımlanan fieldlara varsayılan değer atamalarını sağlayarak kullanıma hazır hale getirir. Bu metodlar geriye bir değer döndürmezler. Geri dönüş tipleri yoktur. İsimleri, class adıyla aynıdır.

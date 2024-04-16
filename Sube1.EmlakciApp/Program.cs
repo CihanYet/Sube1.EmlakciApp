@@ -31,7 +31,7 @@ namespace Sube1.EmlakciApp
             //Console.WriteLine(sayi);//Get
 
 
-            Ev evim = new Ev();
+            //Ev evim = new Ev();
 
             //Console.WriteLine("Oda sayısı giriniz:");
             //evim.Odasayisi = int.Parse(Console.ReadLine());
@@ -44,11 +44,31 @@ namespace Sube1.EmlakciApp
             //Console.WriteLine("Alan giriniz:");
             //evim.SetAlan(double.Parse(Console.ReadLine()));
 
-            evim.SetAlan(120);
-            Console.WriteLine($"Girilen evin büyüklüğü:{evim.Buyukluk}");
+            //evim.SetAlan(120);
+            //Console.WriteLine($"Girilen evin büyüklüğü:{evim.Buyukluk}");
 
 
 
+            //var evim = new Ev();
+
+            //evim.SetOdaSayisi(-2);
+            //Console.WriteLine(evim.GetOdasayisi());
+
+            //evim.Odasayisi = -2;
+            //Console.WriteLine(evim.Odasayisi);
+
+            //evim.SetAlan(90);
+            //evim.Alan = 90;
+            //Console.WriteLine(evim.Buyukluk);
+
+
+            var evim = new Ev(2, 3, "Kazan", 100);
+            Console.WriteLine(evim.EvBilgileri());
+
+            var evim2 = new Ev(2, 2, 100);
+            Console.WriteLine(evim2.EvBilgileri());
+            //Ev.Sayac = 10;
+            Console.WriteLine($"Ev sayısı:{Ev.Sayac}");
 
             //<100 Küçük ev
             //100-150 Orta Ev
