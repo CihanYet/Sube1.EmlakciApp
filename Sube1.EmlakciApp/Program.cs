@@ -60,19 +60,25 @@ namespace Sube1.EmlakciApp
             //evim.SetAlan(90);
             //evim.Alan = 90;
             //Console.WriteLine(evim.Buyukluk);
+            //var home = new Ev();
+            //Console.WriteLine(home.EvBilgileri());
 
+            //var evim = new Ev(2, 3, "Kazan", 100);
+            //Console.WriteLine(evim.EvBilgileri());
 
-            var evim = new Ev(2, 3, "Kazan", 100);
-            Console.WriteLine(evim.EvBilgileri());
-
-            var evim2 = new Ev(2, 2, 100);
-            Console.WriteLine(evim2.EvBilgileri());
-            //Ev.Sayac = 10;
-            Console.WriteLine($"Ev sayısı:{Ev.Sayac}");
+            //var evim2 = new Ev(2, 2, 100);
+            //Console.WriteLine(evim2.EvBilgileri());
+            ////Ev.Sayac = 10;
+            //Console.WriteLine($"Ev sayısı:{Ev.Sayac}");
 
             //<100 Küçük ev
             //100-150 Orta Ev
             //>150 Büyük Ev
+
+
+            KiralikEv ke = new KiralikEv(2, 1, 120, "Gazi", 500, 600);
+            Console.WriteLine(ke.EvBilgileri());
+
         }
     }
 }

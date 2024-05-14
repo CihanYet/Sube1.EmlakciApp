@@ -116,8 +116,15 @@ namespace Sube1.EmlakciLib
             //} 
             #endregion
         }
+
+        ~Ev()
+        {
+            sayac--;
+        }
     }
 }
 
 
 //Constructor: Class içinde tanımlanan fieldlara varsayılan değer atamalarını sağlayarak kullanıma hazır hale getirir. Bu metodlar geriye bir değer döndürmezler. Geri dönüş tipleri yoktur. İsimleri, class adıyla aynıdır.
+
+//Garbage Collector:İşi bitern nesneleri bellekten Dispose eden yapıdır.
