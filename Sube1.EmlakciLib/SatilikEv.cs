@@ -23,9 +23,19 @@ namespace Sube1.EmlakciLib
         public double Satisfiyat { get; set; }
 
 
-        public new string EvBilgileri()
+        //public new string EvBilgileri()
+        //{
+        //    return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
+        //}
+
+        //public override string EvBilgileri()
+        //{
+        //    return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
+        //}
+
+        public override string ToString()
         {
-            return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
+            return $"{base.ToString()}\nSatış Fiyatı:{this.Satisfiyat}";
         }
     }
 }

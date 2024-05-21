@@ -2,7 +2,7 @@
 
 namespace Sube1.EmlakciLib
 {
-    public class Ev
+    public class Ev:Object
     {
         private static int sayac = 0;
         //Constructor-Yapıcı Metod-Kurucu metod
@@ -92,29 +92,34 @@ namespace Sube1.EmlakciLib
 
         public int GetOdasayisi() => odasayisi;
 
-        public string EvBilgileri()
+        //public virtual string EvBilgileri()
+        //{
+        //    return $"Oda Sayısı:{this.Odasayisi}\nKat No:{this.Katno}\nAlan:{this.alan}\nSemt:{this.semt}";
+
+        //    #region Try-Catch-NullCheck
+        //    //if (home != null)//Null check
+        //    //{
+        //    //    return $"Oda Sayısı:{home.odasayisi}\nKat No:{home.katno}\nAlan:{home.alan}\nSemt:{home.semt}";
+        //    //}
+        //    //else
+        //    //{
+        //    //    return "Referans Null geldi!";
+        //    //}
+
+        //    //try
+        //    //{
+        //    //    return $"Oda Sayısı:{home.odasayisi}\nKat No:{home.katno}\nAlan:{home.alan}\nSemt:{home.semt}";
+        //    //}
+        //    //catch (Exception ex)
+        //    //{                
+        //    //    throw;
+        //    //} 
+        //    #endregion
+        //}
+
+        public override string ToString()
         {
             return $"Oda Sayısı:{this.Odasayisi}\nKat No:{this.Katno}\nAlan:{this.alan}\nSemt:{this.semt}";
-
-            #region Try-Catch-NullCheck
-            //if (home != null)//Null check
-            //{
-            //    return $"Oda Sayısı:{home.odasayisi}\nKat No:{home.katno}\nAlan:{home.alan}\nSemt:{home.semt}";
-            //}
-            //else
-            //{
-            //    return "Referans Null geldi!";
-            //}
-
-            //try
-            //{
-            //    return $"Oda Sayısı:{home.odasayisi}\nKat No:{home.katno}\nAlan:{home.alan}\nSemt:{home.semt}";
-            //}
-            //catch (Exception ex)
-            //{                
-            //    throw;
-            //} 
-            #endregion
         }
 
         ~Ev()

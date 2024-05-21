@@ -76,8 +76,37 @@ namespace Sube1.EmlakciApp
             //>150 Büyük Ev
 
 
-            KiralikEv ke = new KiralikEv(2, 1, 120, "Gazi", 500, 600);
-            Console.WriteLine(ke.EvBilgileri());
+            var ke = new KiralikEv(2, 1, 120, "Kiralık Ev", 500, 600);
+            var ke1 = new KiralikEv(3, 2, 100, "Kiralık Ev", 700, 800);
+
+            var se = new SatilikEv(3, 2, "Satılık Ev", 100, 600);
+            var se1 = new SatilikEv(2, 1, "Satılık Ev", 150, 1000);
+
+            Ev[] evler = new Ev[4];
+            evler[0] = ke;
+            evler[1] = ke1;
+            evler[2] = se;
+            evler[3] = se1;
+
+            for (int i = 0; i < evler.Length; i++)
+            {
+                //if (evler[i] is KiralikEv)
+                //{
+                //    KiralikEv kev = (KiralikEv)evler[i];
+                //    Console.WriteLine(kev.EvBilgileri());
+                //}
+                //else
+                //{
+                //    SatilikEv sev = (SatilikEv)evler[i];
+                //    Console.WriteLine(sev.EvBilgileri());
+                //}
+
+                Console.WriteLine(evler[i].ToString());
+                Console.WriteLine("----------------------");
+
+                
+                
+            }
 
         }
     }
