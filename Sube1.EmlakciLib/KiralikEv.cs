@@ -15,11 +15,15 @@ namespace Sube1.EmlakciLib
         {
             this.Kira = kira;
             this.Depozito = depozito;
-
         }
 
         public double Kira { get; set; }
         public double Depozito { get; set; }
+
+        public override string AidatOdeme()
+        {
+            return $"Kiralık evin aidatı:{base.Aidat}. Bu tutarı kiracı öder.";
+        }
 
         //public new string EvBilgileri()
         //{

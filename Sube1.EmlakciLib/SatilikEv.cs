@@ -22,6 +22,11 @@ namespace Sube1.EmlakciLib
         }
         public double Satisfiyat { get; set; }
 
+        public override string AidatOdeme()
+        {
+            return $"Satılık evin aidatı:{base.Aidat}.Bu tutarı ev sahibi öder";
+        }
+
 
         //public new string EvBilgileri()
         //{

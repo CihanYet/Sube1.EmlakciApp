@@ -2,7 +2,7 @@
 
 namespace Sube1.EmlakciLib
 {
-    public class Ev:Object
+    public abstract class Ev:Object
     {
         private static int sayac = 0;
         //Constructor-Yapıcı Metod-Kurucu metod
@@ -34,6 +34,8 @@ namespace Sube1.EmlakciLib
         private string buyukluk;
 
         private double alan;
+
+        public double Aidat { get; set; }
 
         public double Alan
         {
@@ -122,6 +124,9 @@ namespace Sube1.EmlakciLib
             return $"Oda Sayısı:{this.Odasayisi}\nKat No:{this.Katno}\nAlan:{this.alan}\nSemt:{this.semt}";
         }
 
+        public abstract string AidatOdeme();
+       
+
         ~Ev()
         {
             sayac--;
@@ -132,4 +137,13 @@ namespace Sube1.EmlakciLib
 
 //Constructor: Class içinde tanımlanan fieldlara varsayılan değer atamalarını sağlayarak kullanıma hazır hale getirir. Bu metodlar geriye bir değer döndürmezler. Geri dönüş tipleri yoktur. İsimleri, class adıyla aynıdır.
 
-//Garbage Collector:İşi bitern nesneleri bellekten Dispose eden yapıdır.
+//Garbage Collector:İşi biten nesneleri bellekten Dispose eden yapıdır.
+//Abstraction(Soyutlama)
+//1-Abstract Class
+//2-Interface
+
+//Abstract bir class içerisindei abstract bir üye tanımlanırken gövde tanımlaması yapılmaz.
+//Bir class içerisinde abstract bir üye varsa, class da mutlaka abstract olarak tanımlanmalıdır.
+//Abstract olarak tanımlanan üyeler, aynı zamanda virtual'dır ve override edilerek kullanılırlar.
+//Base classta bulunan abstract üyeler, türeyen classlarda mutlaka kullanılmalıdır.(Implement)
+//Conctrete class: Abstract olmayan classlar
